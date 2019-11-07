@@ -4,12 +4,19 @@ import epd7in5
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
+import time
 
 
 EPD_WIDTH = 640
 EPD_HEIGHT = 384
 
 def main():
+    # While loop
+    while(True):
+        print("Running..")
+        time.sleep(2)
+
+def run():
     epd = epd7in5.EPD()
     epd.init()
 
@@ -47,6 +54,7 @@ def main():
     image.save(image_path)
 
     #EDP
+    print("Displaying to EDP")
     epd.display_frame(epd.get_frame_buffer(image))
 
 if __name__ == '__main__':
