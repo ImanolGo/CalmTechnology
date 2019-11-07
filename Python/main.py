@@ -14,7 +14,8 @@ def main():
     # While loop
     while(True):
         print("Running..")
-        time.sleep(2)
+        run()
+        time.sleep(2*60*12)
 
 def run():
     epd = epd7in5.EPD()
