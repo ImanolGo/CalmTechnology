@@ -1,0 +1,12 @@
+Generally, we don’t require any script to execute on every minute but in some case, you may need to configure it.
+* * * * *  /scripts/script.sh
+
+If you want to run your script on 10 minutes interval, can configure like below. These type of crons are useful for monitoring.
+*/10 * * * * /scripts/monitor.sh
+*/10: means to run on every 10 minutes. Same as if you want to execute on every 5 minutes use */5.
+
+If you want to run a script on 4 hours interval. It can be configured like below.
+0 */4 * * * /scripts/script.sh
+
+
+*/2 * * * * /home/pi/CalmTechnology/Scripts/launcher.sh >/home/pi/CalmTechnology/Logs/cronlog.log 2>&1

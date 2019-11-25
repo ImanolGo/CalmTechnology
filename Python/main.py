@@ -11,11 +11,14 @@ EPD_WIDTH = 640
 EPD_HEIGHT = 384
 
 def main():
+	print("Running Calm Technologies")
+	run()
+
     # While loop
-    while(True):
-        print("Running..")
-        run()
-        time.sleep(2*60*12)
+#    while(True):
+ #       print("Running..")
+  #      run()
+   #     time.sleep(2*60*12)
 
 def run():
     epd = epd7in5.EPD()
